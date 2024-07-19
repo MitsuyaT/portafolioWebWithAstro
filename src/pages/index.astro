@@ -5,11 +5,50 @@ import Card from '../components/Card.astro'
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Card/>
+		<div class="grid-container">
+			<div class="flex justify-end left-side">
+				<Card />
+			</div>
+			<div class="right-side py-1 px-10">
+				<h1 class="text-8xl">Front-end Developer</h1>
+				<h2 class="text-5xl">Estoy para solucionar tus problemas</h2>
+				<p class="text-2xl py-7">Aca ira algo mas pero nose que todavia</p>
+			</div>
+		</div>
+		
 	</main>
 	
 </Layout>
 
 <style>
+
+	h2{
+		color: #82005d;
+	}
+	.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Dos columnas de igual tamaño */
+	}
+
+	.left-side {
+		background-color: ;/* Color de fondo para la izquierda */
+	}
+
+	.right-side {
+		background-color:; /* Color de fondo para la derecha */
+	}
+
+	/* Estilos para pantallas pequeñas */
+	@media (max-width: 768px) {
+	.grid-container {
+		grid-template-columns: 1fr;
+	}
 	
+	.left-side {
+		order: 2;
+	}
+	
+	.right-side {
+		order: 1;
+	}}
 </style>

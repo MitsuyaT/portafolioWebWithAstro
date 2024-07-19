@@ -2,17 +2,44 @@
 
 ---
 
-<aside class="rounded-md bg-white max-w-max mx-10 my-5">
-   
-    <img class="rounded-lg max-w-56 p-5" src="https://i.pinimg.com/564x/86/47/8b/86478bf00a769fdb6e8d9772b2d654ad.jpg" alt="Foto de Lautaro Rodriguez">
-    <h2 class="text-xl text-center text-gray-950">Lautaro Rodriguez</h2>
-    <p class="text-sm text-center text-gray-950">Frontend Developer</p>
+<aside class="flex rounded-md mx-10 my-5  "> 
+    <div class="card-text flex px-6">
+        <h2 class="text-4xl text-white">Lautaro Rodriguez</h2>
+        <h3 class=" text-white ">Frontend Developer</h3>
+        <p class=" text-white ">En constante aprendizaje en busqueda de solucionar problemas actuales.</p>
+    </div>
+    <img class=" max-w-56" src="https://i.pinimg.com/564x/86/47/8b/86478bf00a769fdb6e8d9772b2d654ad.jpg" alt="Foto de Lautaro Rodriguez">
 </aside>
 
 
 <style>
-    aside{
-        display: flex;
+    aside{ 
+        height: 250px;
+        background-color: #82005d;
+    }
+
+    .card-text {
         flex-direction: column;
+        justify-content: space-evenly
+    }
+
+    h2 {
+        order: 2;
+    }
+
+    h3 {
+        font-size: 22px;
+        color: #070707;
+        order: 1;
+    }
+
+    p {
+        order: 3;
+    }
+
+    @media (min-width: 768px) {
+        aside {
+            flex-direction: column;
+        }
     }
 </style>
