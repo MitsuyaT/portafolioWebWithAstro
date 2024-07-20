@@ -2,13 +2,13 @@
 
 ---
 
-<aside class="flex rounded-md mx-10 my-5  "> 
+<aside class="flex rounded-md md:max-w-min mx-10 my-5  "> 
     <div class="card-text flex px-6">
         <h2 class="text-4xl text-white">Lautaro Rodriguez</h2>
         <h3 class=" text-white ">Frontend Developer</h3>
         <p class=" text-white ">En constante aprendizaje en busqueda de solucionar problemas actuales.</p>
     </div>
-    <img class=" max-w-56" src="https://i.pinimg.com/564x/86/47/8b/86478bf00a769fdb6e8d9772b2d654ad.jpg" alt="Foto de Lautaro Rodriguez">
+    <img class="max-w" src="https://i.pinimg.com/564x/86/47/8b/86478bf00a769fdb6e8d9772b2d654ad.jpg" alt="Foto de Lautaro Rodriguez">
 </aside>
 
 
@@ -39,7 +39,25 @@
 
     @media (min-width: 768px) {
         aside {
-            flex-direction: column;
+            height: auto;
+            flex-direction: column-reverse;
+        }
+
+         h2 {
+            padding: 10px 0px 5px 0px;
+            order: 1;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #070707;
+            order: 2;
+        }
+
+        p {
+            font-size: 13px;
+            padding: 5px 0px 5px 0px;
+            order: 3;
         }
     }
 </style>
