@@ -6,13 +6,13 @@ import Card from '../components/Card.astro'
 <Layout title="Welcome to Astro.">
 	<main>
 		<div class="grid-container">
-			<div class="flex justify-end left-side">
+			<div class="left-side">
 				<Card />
 			</div>
-			<div class="right-side py-1 px-10">
-				<h1 class="text-8xl">Front-end Developer</h1>
-				<h2 class="text-5xl">Estoy para solucionar tus problemas</h2>
-				<p class="text-2xl py-7">Aca ira algo mas pero nose que todavia</p>
+			<div class="right-side ">
+				<h1 class="text-7xl px-3">Front-end Developer</h1>
+				<h2 class="text-2xl px-3">Estoy para solucionar tus problemas</h2>
+				<p class="py-2 px-3">Aca ira algo mas pero nose que todavia</p>
 			</div>
 		</div>
 	</main>
@@ -25,7 +25,7 @@ import Card from '../components/Card.astro'
 	}
 	.grid-container {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Dos columnas de igual tamaño */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
 	}
 
 	
