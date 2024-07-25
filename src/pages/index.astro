@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro'
+import Titles from '../components/Titles.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,19 +11,14 @@ import Card from '../components/Card.astro'
 				<Card />
 			</div>
 			<div class="right-side">
-				<h1 class="text-7xl md:text-8xl px-5">Front-end Developer</h1>
-				<h2 class="text-2xl md:text-5xl px-5">Estoy para solucionar tus problemas</h2>
-				<p class="md:text-2xl py-2 px-5">Aca ira algo mas pero nose que todavia</p>
+				<Titles />
 			</div>
 		</div>
 	</main>
 </Layout>
 
 <style>
-
-	h2{
-		color: #82005d;
-	}
+	
 	.grid-container {
     display: grid;
     grid-template-columns: 1fr 2fr; /* Dos columnas de igual tamaño */
