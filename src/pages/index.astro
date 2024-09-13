@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro'
 import Titles from '../components/Titles.astro';
+import Menu from '../components/Menu.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,8 +11,11 @@ import Titles from '../components/Titles.astro';
 			<div class="flex md:justify-end left-side">
 				<Card />
 			</div>
-			<div class="right-side">
+			<div class="right-side-top">
 				<Titles />
+			</div>
+			<div class="right-side-bot">
+				<Menu />
 			</div>
 		</div>
 	</main>
@@ -20,22 +24,58 @@ import Titles from '../components/Titles.astro';
 <style>
 	
 	.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Dos columnas de igual tamaño */
+    	display: grid;
+   		grid-template-columns: 1fr 2fr; /* Dos columnas de igual tamaño */
+		grid-template-rows: 1fr 2fr;
+		padding-right: 15%;
+	}
+
+	.left-side {
+		
+      	grid-column: 1 / 1; /* Ocupa la primera columna */
+      	grid-row: 1 / 3;
+	}
+
+	.right-side-top,
+	.right-side-bot {
+		grid-column: 2 / 3; /* Ambas ocupan la segunda columna */
+	}
+
+	.right-side-top {
+		
+		grid-row: 1 / 2;
+	}
+
+	.right-side-bot {
+		
+		grid-row: 2 / 3;
 	}
 
 	
 	/* Estilos para pantallas pequeñas */
 	@media (max-width: 768px) {
-	.grid-container {
-		grid-template-columns: 1fr;
+		.grid-container {
+			grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+			grid-template-rows: auto auto auto; /* Tres filas para cada sección */
+		}
+		
+		.left-side,
+     	.right-side-top,
+      	.right-side-bot {
+			grid-column: 1 / 2; /* Todas ocupan la primera columna */
+			grid-row: auto; /* Dejar que se ajuste automáticamente */
+     	}
+
+		.left-side {
+			order: 2;
+		}
+
+		.right-side-top {
+			order: 1;
+		}
+
+		.right-side-bot {
+			order: 3;
+		}
 	}
-	
-	.left-side {
-		order: 2;
-	}
-	
-	.right-side {
-		order: 1;
-	}}
 </style>
