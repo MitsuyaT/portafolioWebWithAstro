@@ -26,7 +26,7 @@
   <style>
 
 .padre {
-      font-size: 14px;
+      font-size: 20px;
       display: grid;
       grid-template-columns: 2fr 2fr 1fr;
       grid-template-rows: auto auto;
@@ -39,30 +39,48 @@
     
    
     .projects {
-      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+      margin: 0px 5px 5px 5px;
+      padding: 15px;
       grid-area: P;
-      border-radius: 15px;
+      border-radius: 10px;
       background-color: #F8C7D7;
     }
 
    
 
     .skills {
-      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+      margin: 5px 5px 0px 5px;
+      padding: 10px;
       grid-area: S;
-      border-radius: 15px;
+      border-radius: 10px;
       background-color: #7664D1;
     }
 
     .cv {
-      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+      margin: 5px 5px 0px 5px;
+      padding: 10px;
       grid-area: CV;
       border-radius: 15px;
       background-color: #B42D80;
     }
 
     .contact {
-      margin: 5px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      padding: 10px;
       grid-area: C;
       border-radius: 15px;
       background-color: #4937B3;
@@ -71,12 +89,16 @@
 
     /*  ICONS */
 
-
-    .contact svg {
-      width: 120px;
+    svg {
+      width: 70px;
       height: auto;
     }
-    
+
+    .contact svg {
+      width: 100px;
+      margin-top: 10px;
+    }
+
 
     @media (min-width: 768px) {
       .padre {
