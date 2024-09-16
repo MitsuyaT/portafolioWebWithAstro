@@ -2,7 +2,7 @@
 
 ---
 
-<body>
+
     <div class="padre text-center">
       <a href="#" class="projects">
         <span>PROJECTS</span>
@@ -21,10 +21,67 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 24 24" style="fill: #DFD8FB"><path d="M21 2H6a2 2 0 0 0-2 2v3H2v2h2v2H2v2h2v2H2v2h2v3a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zm-8 2.999c1.648 0 3 1.351 3 3A3.012 3.012 0 0 1 13 11c-1.647 0-3-1.353-3-3.001 0-1.649 1.353-3 3-3zM19 18H7v-.75c0-2.219 2.705-4.5 6-4.5s6 2.281 6 4.5V18z"></path></svg>
       </a>
     </div>
-  </body>
+ 
 
   <style>
-    .padre {
+
+.padre {
+      width: 390px;
+      font-size: 14px;
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "P P C"
+        "S CV C";
+      
+    }
+
+    
+   
+    .projects {
+      margin: 5px;
+      grid-area: P;
+      border-radius: 15px;
+      background-color: #F8C7D7;
+    }
+
+   
+
+    .skills {
+      margin: 5px;
+      grid-area: S;
+      border-radius: 15px;
+      background-color: #7664D1;
+    }
+
+    .cv {
+      margin: 5px;
+      grid-area: CV;
+      border-radius: 15px;
+      background-color: #B42D80;
+    }
+
+    .contact {
+      margin: 5px;
+      grid-area: C;
+      border-radius: 15px;
+      background-color: #4937B3;
+    }
+
+
+    /*  ICONS */
+
+
+    .contact svg {
+      width: 120px;
+      height: auto;
+    }
+    
+
+    @media (min-width: 768px) {
+      .padre {
+      width: max-content;
       
       font-size: 32px;
       display: grid;
@@ -93,6 +150,7 @@
     }
     .contact svg{
       margin-top: 100px;
+    }
     }
 
     </style>
