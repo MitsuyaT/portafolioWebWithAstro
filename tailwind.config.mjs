@@ -7,6 +7,9 @@ export default {
       md: "1.5rem",
       lg: "3.5rem",
     },
+    width: {
+      48: "11.5rem",
+    },
   },
   plugins: [],
 };
